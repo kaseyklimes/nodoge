@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "NoDoge",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "nodoge16.png",
+      "48": "nodoge48.png",
+      "128": "nodoge128.png"
+    }
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
